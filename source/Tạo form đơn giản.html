@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="http://localhost" method="post">
+<p><H2>SỞ THÍCH CỦA BẠN</H2></p>
+    <table  border="0">
+        <tr>
+            <th>Họ và tên</th>
+            <th><input type="text" name="yourname" value=""><br></th>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <th><input type="text" name="Email" value=""><br></th>
+        </tr>
+    </table>
+    <table width="500">
+        <tr>
+            <th rowspan="3">Sở Thích</th>
+            <th><input type="checkbox" name="Thể thao"> Thể Thao</th>
+            <th><input type="checkbox" name="Âm nhạc"> Âm Nhạc</th>
+            <th><input type="checkbox" name="Đọc sách"> Đọc Sách</th>
+        </tr>
+        <tr>
+            <th><input type="checkbox" name="Lướt web"> Lướt Web</th>
+            <th><input type="checkbox" name="Chơi game"> Chơi Game</th>
+            <th><input type="checkbox" name="Điện ảnh"> Điện Ảnh</th>
+        </tr>
+        <tr>
+            <th colspan="3"><input type="checkbox"name="Du lịch"> Du Lịch</th>
+        </tr>
+    </table>
+    <input type="submit" name="submitform" value="Gửi Thông Tin">
+    <input type="reset" name="resetform" value="Nhập Lại">
+
+</form>
+<style>
+    body{padding: 50px 450px;
+    text-align: left}
+    th {
+padding: 3px 10px;
+    }
+    table {
+
+    }
+</style>
+<br><br><br>
+
+</body>
+</html>
