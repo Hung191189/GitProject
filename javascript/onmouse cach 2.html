@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p id="demo">click here</p>
+<script>
+    var demo = document.getElementById("demo");
+    demo.addEventListener("mouseover",inside);
+    demo.addEventListener("mouseout",out);
+    function inside(){
+        document.getElementById("demo").style.color = "red";
+    }
+    function out(){
+        document.getElementById("demo").style.color = "black";
+    }
+
+
+</script>
+</body>
+</html>

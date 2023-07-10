@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<select id="myselect">
+    <option value="audi">audi</option>
+    <option value="bmv">bmv</option>
+    <option value="mer">mer</option>
+</select>
+<script>
+    var selectedelement = document.getElementById("myselect");
+    selectedelement.addEventListener("change",changefunction);
+    function changefunction() {
+        var selectvalue = document.getElementById("myselect").value;
+        alert (selectvalue);
+    }
+</script>
+</body>
+</html>
