@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button type="button" onclick="showmess();">Click here</button>
+<br>
+<button type="button" onclick="showmess1();">Click here</button>
+<br>
+<button type="button" onclick="showmess2();">Click here</button>
+</body>
+<script>
+    let i = 10
+    let f = 20.5
+    let b = true
+    let s = 'ha noi'
+    function showmess(){
+        document.write('i= '+i)
+        document.write('<br/>')
+        document.write('f= '+f)
+        document.write('<br/>')
+        document.write('s= '+s)
+        document.write('<br/>')
+        document.write('b= ' +b)
+
+    }
+    let width = 20
+    let height = 10
+    let area = width * height
+    function showmess1(){
+    document.write("area=" + area)
+    }
+    let a = 10
+    let c = 2
+    let d = a%c
+    function showmess2(){
+        prompt("a = 10, c = 2, d = a%c","d=0");
+        alert('d=' +d)
+    }
+</script>
+</html>
