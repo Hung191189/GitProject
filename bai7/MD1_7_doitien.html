@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>ỨNG DỤNG CHUYỂN ĐỔI TIỀN TỆ</h1>
+<table border="0" style="width: 600px">
+    <tr>
+        <td style="width: 200px">Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text"name="soTien" value="1" id="soTien"></td>
+        <td><select name="loaiTien" id="tienGoc">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td><select name="loaiTien" id="tienDoi">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select></td>
+        <td><button onclick="convert()">Convert</button></td>
+    </tr>
+</table>
+<p id="Result"></p>
+</body>
+<script src="MD1_7_doi_tien.js"></script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table{
+      table-layout: fixed;
+      width: 400px; height: 500px;
+    }
+  td{
+    text-align: center;
+  }
+  th{
+    text-align: right;
+  }
+  input{
+    width: 380px; height: 50px;
+  }
+  </style>
+</head>
+<body>
+<h1>Caculator</h1>
+<table border="1">
+  <tr>
+    <th colspan="4"><h2 id="screen"></h2></th>
+  </tr>
+  <tr>
+    <td><button onclick="dauNgoacTrai()">(</button></td>
+    <td><button onclick="dauNgoacpPhai()">)</button></td>
+    <td><button onclick="dauPhanTram()">%</button></td>
+    <td><button onclick="AC()">AC</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="num7()">7</button></td>
+    <td><button onclick="num8()">8</button></td>
+    <td><button onclick="num9()">9</button></td>
+    <td><button onclick="dauChia()">/</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="num4()">4</button></td>
+    <td><button onclick="num5()">5</button></td>
+    <td><button onclick="num6()">6</button></td>
+    <td><button onclick="dauNhan()">*</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="num1()">1</button></td>
+    <td><button onclick="num2()">2</button></td>
+    <td><button onclick="num3()">3</button></td>
+    <td><button onclick="dauTru">-</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="num0()">0</button></td>
+    <td><button onclick="dauCham()">.</button></td>
+    <td><button onclick="dauBang()">=</button></td>
+    <td><button onclick="dauCong()">+</button></td>
+  </tr>
+</table>
+
+</body>
+<script src="MD1_7_CaculatorAdvance.js"></script>
+</html>

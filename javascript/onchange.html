@@ -8,16 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-<select id="myselect">
+<select id="mySelect" onchange="doSomething()">
     <option value="audi">audi</option>
     <option value="bmv">bmv</option>
     <option value="mer">mer</option>
 </select>
 <script>
-    var selectedelement = document.getElementById("myselect");
-    selectedelement.addEventListener("change",changefunction);
-    function changefunction() {
-        var selectvalue = document.getElementById("myselect").value;
+    function doSomething() {
+        let selectvalue = document.getElementById("mySelect").value;
         alert (selectvalue);
     }
 </script>
