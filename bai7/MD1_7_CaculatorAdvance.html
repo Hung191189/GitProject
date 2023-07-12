@@ -13,47 +13,45 @@
   }
   th{
     text-align: right;
+    height: 50px;
   }
-  input{
-    width: 380px; height: 50px;
-  }
+
   </style>
 </head>
 <body>
 <h1>Caculator</h1>
+<input type="text" id="input" style="width: 390px;">
 <table border="1">
+
   <tr>
-    <th colspan="4"><h2 id="screen"></h2></th>
+    <td><button onclick="bam('(')" value="(">(</button></td>
+    <td><button onclick="bam(')')">)</button></td>
+    <td><button onclick="bam('%')">%</button></td>
+    <td><button onclick="xoa()">AC</button></td>
   </tr>
   <tr>
-    <td><button onclick="dauNgoacTrai()">(</button></td>
-    <td><button onclick="dauNgoacpPhai()">)</button></td>
-    <td><button onclick="dauPhanTram()">%</button></td>
-    <td><button onclick="AC()">AC</button></td>
+    <td><button value="7" onclick="bam('7')">7</button></td>
+    <td><button onclick="bam('8')">8</button></td>
+    <td><button onclick="bam('9')">9</button></td>
+    <td><button onclick="bam('/')">/</button></td>
   </tr>
   <tr>
-    <td><button onclick="num7()">7</button></td>
-    <td><button onclick="num8()">8</button></td>
-    <td><button onclick="num9()">9</button></td>
-    <td><button onclick="dauChia()">/</button></td>
+    <td><button onclick="bam('4')">4</button></td>
+    <td><button onclick="bam('5')">5</button></td>
+    <td><button onclick="bam('6')">6</button></td>
+    <td><button onclick="bam('*')">*</button></td>
   </tr>
   <tr>
-    <td><button onclick="num4()">4</button></td>
-    <td><button onclick="num5()">5</button></td>
-    <td><button onclick="num6()">6</button></td>
-    <td><button onclick="dauNhan()">*</button></td>
+    <td><button onclick="bam('1')">1</button></td>
+    <td><button onclick="bam('2')">2</button></td>
+    <td><button onclick="bam('3')">3</button></td>
+    <td><button onclick="bam('-')">-</button></td>
   </tr>
   <tr>
-    <td><button onclick="num1()">1</button></td>
-    <td><button onclick="num2()">2</button></td>
-    <td><button onclick="num3()">3</button></td>
-    <td><button onclick="dauTru">-</button></td>
-  </tr>
-  <tr>
-    <td><button onclick="num0()">0</button></td>
-    <td><button onclick="dauCham()">.</button></td>
-    <td><button onclick="dauBang()">=</button></td>
-    <td><button onclick="dauCong()">+</button></td>
+    <td><button onclick="bam('0')">0</button></td>
+    <td><button onclick="bam('.')">.</button></td>
+    <td><button onclick="result()">=</button></td>
+    <td><button onclick="bam('+')">+</button></td>
   </tr>
 </table>
 
