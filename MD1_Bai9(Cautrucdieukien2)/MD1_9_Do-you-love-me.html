@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Do you love me</h1>
+<button onclick="y()">Yes</button>
+<button value="NO" id="d" onmouseover="n()" style="position: absolute">NO</button>
+<script>
+    function y(){
+        alert("2tr 1 dem")
+    }
+    function n(){
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById("d").style.left = x + 'px';
+        document.getElementById("d").style.top = y + 'px';
+        console.log(x)
+    }
+</script>
+</body>
+</html>

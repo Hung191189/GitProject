@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            table-layout: fixed;
+            width: 400px; height: 400px;
+        }
+        td{
+            text-align: center;
+        }
+        th{
+            text-align: right;
+            height: 50px;
+        }
+        button{
+            width: 60px; height: 60px;
+        }
+    </style>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="text" id="input" style="width: 392px; height: 30px">
+<table border="1">
+    <tr>
+        <td><button onclick="bam('(')">(</button></td>
+        <td><button onclick="bam(')')">)</button></td>
+        <td><button onclick="bam('%')">%</button></td>
+        <td><button onclick="xoa()">AC</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="bam('7')">7</button></td>
+        <td><button onclick="bam('8')">8</button></td>
+        <td><button onclick="bam('9')">9</button></td>
+        <td><button onclick="bam('/')">/</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="bam('4')">4</button></td>
+        <td><button onclick="bam('5')">5</button></td>
+        <td><button onclick="bam('6')">6</button></td>
+        <td><button onclick="bam('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="bam('1')">1</button></td>
+        <td><button onclick="bam('2')">2</button></td>
+        <td><button onclick="bam('3')">3</button></td>
+        <td><button onclick="bam('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="bam('0')">0</button></td>
+        <td><button onclick="bam('.')">.</button></td>
+        <td><button onclick="result()">=</button></td>
+        <td><button onclick="bam('+')">+</button></td>
+    </tr>
+</table>
+<script src="MD1_9_tao-may-tinh-don-gian.js"></script>
+</body>
+</html>

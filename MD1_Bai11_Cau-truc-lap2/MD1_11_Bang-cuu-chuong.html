@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    let bang
+    let i;
+    let j;
+    bang = "<table border='1'>"
+    for (j = 1; j <=9; j++ ){
+          bang = bang + "<tr>";
+          for (i = 2; i <=8; i++){
+              bang = bang + "<td>" + (i)+ "*"+ (j) + "=" + i * j + "</td>"
+          }
+      bang = bang + "</tr>";
+    }
+    bang = bang + "</table>";
+    document.write(bang)
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<h1 style="text-align: center">Luyện tập</h1>
+<ul>
+  <li>A chia hết cho B</li>
+  <input type="text" id="a">Number A <br>
+  <input type="text" id="b">Number B <br>
+  <button onclick="result()">Kiểm tra</button>
+</ul>
+<script>
+  function result(){
+    let a =+ document.getElementById("a").value
+    let b =+ document.getElementById("b").value
+        if (a % b === 0 ){
+            alert("a chia hết cho b")
+        } else {
+            alert("a không chia hết cho b")
+        }
+  }
+</script>
+</div>
+<div>
+    <ul style="list-style-type: georgian">
+        <li>Xét tuổi vào lớp 10</li>
+        <input type="text" placeholder="Nhập tuổi" id="a1">
+        <button onclick="result1()">Kiểm tra</button>
+    </ul>
+    <script>
+        function result1(){
+            let a1 = document.getElementById("a1").value
+            if (a1 >= 16){
+                alert("đã đủ tuổi vào lớp 10")
+            } else{
+                alert("ve que")
+            }
+        }
+    </script>
+</div>
+<div>
+    <ul style="list-style-type: square">
+        <li>Lớn hơn hay nhỏ hơn 0</li>
+        <input type="number" placeholder="nhập 1 số" id="a2">
+        <button onclick="result2()">Kiểm tra</button>
+    </ul>
+    <script>
+        function result2(){
+        let a2 = document.getElementById("a2").value
+        if(a2 > 0){
+            document.write("số lớn hơn 0")
+        } else if (a2 < 0){
+            document.write("số nhỏ hơn 0")
+        } else {
+            document.write("nhập số khác 0")
+        }
+        }
+    </script>
+</div>
+<div>
+    <ul style="list-style-type: disc">
+        <li>So sánh 3 số</li>
+        <input type="number" id="a3" placeholder="Nhập số a">
+        <input type="number" id="b3" placeholder="Nhập số b">
+        <input type="number" id="c3" placeholder="Nhập số c">
+        <button onclick="result3()">So sánh</button>
+    </ul>
+    <script>
+        function result3(){
+            let a3 =+ document.getElementById("a3").value
+            let b3 =+ document.getElementById("b3").value
+            let c3 =+ document.getElementById("c3").value
+                if (a3 >b3 && a3 > c3){
+                    alert("a lơn nhất")
+                } else if (b3 > a3 && b3 > c3){
+                    alert("b lớn nhất")
+                }else {
+                    alert("c lớn nhất")
+                }
+        }
+    </script>
+</div>
+<div>
+    <style>
+        table{
+            border-collapse: collapse;
+            margin-left: 40px;
+        }
+        th, td{
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+    <p style="margin-left: 40px">Xếp loại học lực</p>
+    <table border="1">
+        <tr>
+            <th>Họ tên</th>
+            <th>Bài kiểm tra</th>
+            <th>Thi giữa kỳ</th>
+            <th>Thi cuối kỳ</th>
+            <th>Xếp loại</th>
+        </tr>
+        <tr>
+            <td><input type="text" style="height: 50px; width: 150px"></td>
+            <td><input type="number" style="height: 50px; width: 150px" id="a4"></td>
+            <td><input type="numbe" style="height: 50px; width: 150px" id="b4"></td>
+            <td><input type="numbe" style="height: 50px; width: 150px" id="c4"></td>
+            <td><p id="result4"></p></td>
+        </tr>
+    </table>
+    <button onclick="xem4()">KQ</button>
+    <script>
+        function xem4(){
+            let a4 =+ document.getElementById("a4").value
+            let b4 =+ document.getElementById("b4").value
+            let c4 =+ document.getElementById("c4").value
+                if((a4 + b4*1.5 +c4*2)/4.5 >= 5){
+                    document.getElementById("result4").innerHTML ="Trung bình"
+                } if((a4 + b4*1.5 +c4*2)/4.5 >= 7){
+                    document.getElementById("result4").innerHTML ="Khá"
+            }else if ((a4 + b4*1.5 +c4*2)/4.5 >= 9){
+                    document.getElementById("result4").innerHTML ="Giỏi"
+            } else{
+                    document.getElementById("result4").innerHTML ="Đúp"
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
