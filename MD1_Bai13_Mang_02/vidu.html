@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="nhap chu">
+        <br>
+            <button onClick="change()">Change</button>
+            <script>
+                function change(){
+                let a = document.getElementById("name").value
+                let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                let LOWER = "abcdefghijklmnopqrstuvwxyz";
+                let result1 = []
+                for(let i = 0; i < a.length; i++){
+                if(UPPER.indexOf(a[i] !== -1)){
+                result1.push(a[i].toLowerCase());
+            } else if (LOWER.indexOf(a[i] !== -1)){
+                result1.push(a[i].toUpperCase());
+            } else {
+                result1.push(a[i]);
+            }
+            }
+                document.write(result1.join(''));
+                console.log(result1)
+            }
+
+</script>
+</body>
+</html>

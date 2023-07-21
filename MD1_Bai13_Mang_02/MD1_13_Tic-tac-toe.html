@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="caro"></p>
+<button onclick="changeX()">X</button>
+<button onclick="changeO()">O</button>
+<script>
+  let data = ""
+  let table =[]
+  let b = document.getElementById("caro");
+    for(i = 0; i < 5; i++){
+        table[i] = new Array('(.)','(.)','(.)','(.)','(.)')
+    }
+    for(i = 0; i < 5; i++){
+        data += "<br>"
+            for(j = 0; j < 5; j++){
+                data += table[i][j] + "&nbsp;&nbsp;"
+            }
+        b.innerHTML = data
+    }
+
+  function changeX(){
+        let positionX =+ prompt("X: ")
+        let positionY =+ prompt("Y: ")
+        let data = ""
+        table[positionX][positionY] = "X"
+            for(i = 0; i < 5; i++){
+                data += "<br>"
+                    for(j = 0; j < 5; j++){
+                        data += table[i][j] + "&nbsp;&nbsp;&nbsp;"
+                    }
+            }
+        b.innerHTML = data
+  }
+  function changeO(){
+      let positionX =+ prompt("X: ")
+      let positionY =+ prompt("Y: ")
+      let data = ""
+      table[positionX][positionY] = "O"
+      for(i = 0; i < 5; i++){
+          data += "<br>"
+          for(j = 0; j < 5; j++){
+              data += table[i][j] + "&nbsp;&nbsp;&nbsp;"
+          }
+      }
+      b.innerHTML = data
+  }
+
+</script>
+</body>
+</html>

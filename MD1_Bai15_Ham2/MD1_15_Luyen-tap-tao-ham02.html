@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="bai1" placeholder="binh phuong">
+<button onclick="bai1()">Bai 1</button>
+<br>
+<input type="number" id="bai2.1" placeholder="nhap ban kinh">
+<button onclick="bai2a()">Bai 2 dien tich</button>
+<br>
+<input type="number" id="bai2.2" placeholder="nhap ban kinh">
+<button onclick="bai2b()">Bai 2 chu vi</button>
+<br>
+<input type="number" id="bai3" placeholder="nhap so muon tinh giai thua">
+<button onclick="bai3()">Bai 3 tinh giai thua</button>
+<br>
+<input type="text" id="bai4" placeholder="nhap chuoi">
+<button onclick="bai4()">Bai 4 kiem tra ky tu so</button>
+<br>
+<button onclick="bai5()">Bai 5 so be nhat</button>
+<br>
+<input type="number" id="bai6" placeholder="nhap so">
+<button onclick="bai6()">Bai 6 so nguyen duong</button>
+<br>
+<p id="bai7a"> </p>
+<p id="bai7b"> </p>
+<button onclick="bai7()">Bai 7 doi cho 2 so</button>
+<script>
+  function binhP(x){
+      return x*x
+  }
+  function bai1(){
+      let a =+ document.getElementById("bai1").value;
+      let ketQua = binhP(a)
+      alert(ketQua)
+  }
+  function dienTichTron(r){
+      return Math.PI*r*r
+  }
+  function bai2a(){
+      let r =+ document.getElementById("bai2.1").value;
+      let result = dienTichTron(r)
+      alert(result)
+  }
+  function chuViTron(r){
+      return Math.PI*2*r
+  }
+  function bai2b(){
+      let r =+ document.getElementById("bai2.2").value;
+      let result = chuViTron(r)
+      alert(result)
+  }
+  function gaiThua(n){
+      let giaiThua = 1;
+        if(n > 1){
+            for(let i = 1; i <= n; i++){
+                giaiThua = giaiThua*i
+            }
+        } else if(n === 0){
+            giaiThua = 1
+        }else{
+            return "Giai thua khong xac dinh"
+        }
+      return giaiThua
+  }
+  function bai3(){
+      let input =+ document.getElementById("bai3").value;
+      let result = gaiThua(input)
+      alert(result)
+  }
+  function kiemTraKyTuSo(i){
+      if(i / i === 1){
+          return true
+      }else {
+          return false
+      }
+  }
+  function bai4(){
+      let input = document.getElementById("bai4").value;
+      let result = kiemTraKyTuSo(input)
+        if(result){
+            alert("day la ky tu so")
+        }else{
+            alert("day khong phai ky tu so")
+        }
+  }
+  function sonNguyen(a,b,c){
+      if(b < a && b < c){
+          min = b
+          alert(b+" la so be nhat")
+      }else if(c < a && c < b){
+          min = c
+          alert(c+" la so be nhat")
+      }else{
+          min = a
+          alert(a+" la so be nhat")
+      }
+  }
+  function bai5(){
+      let a =+ prompt("nhap so thu nhat: ")
+      let b =+ prompt("nhap so thu hai: ")
+      let c =+ prompt("nhap so thu ba: ")
+      sonNguyen(a,b,c)
+  }
+  function soNguyenDuong(num){
+      if (num % 1 === 0 && num > 0){
+          return true
+      } else{
+          return false
+      }
+  }
+  function bai6(){
+      let x =+ document.getElementById("bai6").value;
+      let result = soNguyenDuong(x);
+      if(result){
+          alert("true")
+      }else {
+          alert("false")
+      }
+  }
+  function swap(a,b){
+      let c
+      c = a
+      a = b
+      b = c
+      document.getElementById("bai7b").innerHTML = a +""+ b+""
+  }
+  function bai7(){
+      let a =+ prompt("nhap so a: ")
+      let b =+ prompt("nhap so b: ")
+      document.getElementById("bai7a").innerHTML = a +""+ b+""
+      swap(a,b)
+  }
+
+</script>
+</body>
+</html>

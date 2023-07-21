@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table, tr{
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 150px;
+        height: 20px;
+    }
+
+</style>
+<body>
+<script>
+    function feet(m){
+        let f = 3.279*m
+        return f
+    }
+    function meters(f){
+        let m = 0.305*f
+        return m
+    }
+    let m =+ prompt("nhap met: ");
+    document.write(m + "meters = "+ feet(m) + " feet" + "<br>")
+    let f =+ prompt("nhap feet: ");
+    document.write(f + "feet = "+ meters(f) + "meters")
+</script>
+</body>
+</html>

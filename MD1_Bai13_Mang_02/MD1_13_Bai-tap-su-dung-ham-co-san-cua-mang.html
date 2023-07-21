@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>-->
+<!--  let myColor = ["Red","Green","White","Black"];-->
+<!--  document.write(myColor.toString());-->
+<!--  document.write("<br/>")-->
+<!--  document.write(myColor.join())-->
+<!--  document.write("<br/>")-->
+<!--  document.write(myColor.join('+'))-->
+<!--document.write("<br/>")-->
+<!--  let x = [1,2,4,6,7,8,9,10,12];-->
+<!--  let result = [x[0]];-->
+<!--    for(let i = 1; i < x.length; i++){-->
+<!--        if(x[i-1] % 2 ===0 && x[i] % 2 ===0){-->
+<!--            result.push('-',x[i])-->
+<!--        }else {-->
+<!--            result.push(x[i])-->
+<!--        }-->
+<!--    }-->
+<!--    document.write(result.join(''))-->
+<!--  document.write("<br/>")-->
+<!--</script>-->
+<input type="text" id="name" placeholder="nhap chu">
+<br>
+<button onclick="change()">Change</button>
+<script>
+    function change(){
+        // var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        // var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let a = document.getElementById("name").value;
+        let final = a.split("")
+        for (let i = 0; i < final.length; i++) {
+            if(final[i] === final[i].toUpperCase()){
+                final[i] = final[i].toLowerCase()
+            }
+            else if(final[i] === final[i].toLowerCase()){
+                final[i] = final[i].toUpperCase()
+            }
+        }
+        console.log(final.join(" "))
+        //     for(let i = 0; i < a.length; i++){
+        //         if(UPPER.indexOf(a[i]) !== -1){
+        //             result1.push(a[i].toLowerCase());
+        //         } else if (LOWER.indexOf(a[i]) !== -1) {
+        //             result1.push(a[i].toUpperCase());
+        //         } else {
+        //             result1.push(a[i]);
+        //         }
+        //     }
+    }
+
+</script>
+</body>
+</html>

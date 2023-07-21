@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let y = [1, 3, 5, 7, 9, 11, 13, 15, 17];
+let d = 0;
+let c = y.length - 1;
+while (d < c){
+  let e = y[d];
+  y[d] = y[c];
+  y[c] = e;
+  d++
+  c--
+}
+document.write(y)
+document.write("<br>")
+let x = [-3, 5, 1, 3, 2, 10];
+let first = 0;
+let last = x.length - 1;
+while (first < last) {
+let b = x[first];
+x[first] = x[last];
+x[last] = b;
+first++;
+last--;
+}
+document.write(x)
+document.write("<br>")
+
+let a = ['q','w','e','r','t','y','u','i','o','p'];
+let f = 0;
+let l = a.length - 1;
+while(f < l){
+  let x = a[f];
+  a[f] = a[l];
+  a[l] = x;
+  f++
+  l--
+}
+console.log(a)
+document.write(a)
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="result" oninput="binhP()">ketqua <span id="kq"/>
+<script>
+    // function square(num){
+    //     // num = 2
+    //    let result = num * num;
+    //    return result;
+    // }
+    // let a =50
+    // console.log(  square(a))
+    // function binhP(){
+    //     let a =+ document.getElementById("result").value;
+    //     let c = square(a)
+    //     console.log(c)
+    //     document.getElementById("kq").innerHTML = c
+    // }
+    // function square(x) {
+    //     x = x * x;
+    // }
+    // let y = 10;
+    // square(y);
+    // console.log(y);
+
+    // function processconfirm(answer){
+    //     let result = "";
+    //         if(answer){
+    //             result = "Lets go, playing this game";
+    //         } else {
+    //             result = "oh, see you again";
+    //         }
+    //         return result;
+    // }
+    // let begin = confirm("Do you want phay game?");
+    // let theAnswer = processconfirm(begin);
+    // alert(theAnswer)
+    // function callByValue(a, v) {
+    //     let input = document.getElementById('result').value
+    //     console.log(input)
+    //     console.log("Inside Call by Value Method");
+    //     // a = 100;
+    //     // v = 200;
+    //     console.log("varOne =" + a +"varTwo =" +v);
+    // }
+    // let varOne = 20;
+    // let varTwo = 50;
+    // console.log("Before Call by Value Method");
+    // console.log("varOne =" + varOne +"varTwo =" +varTwo);
+    // callByValue(varOne, varTwo)
+    // console.log("After Call by Value Method");
+    // console.log("varOne =" + varOne +"varTwo =" +varTwo);
+    function func1(a){
+        if(a == 2)
+            return 2;
+        return a * func1(a - 1);
+    }
+    func1(6)
+    console.log(func1(6))
+</script>
+</body>
+</html>

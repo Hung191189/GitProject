@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = ["loai1","loai2","loai3"];
+    for(let i = 0; i < mang.length; i++){
+        console.log("index = " + i + "..value=" + mang[i])
+        let first = mang[0]
+        console.log(first)
+    }
+    document.write("<br><br>")
+    let arr = ["Toyota", "Subaru", "BMW"]
+    document.write(arr.sort() + "<br>")
+    document.write(arr.reverse())
+    document.write("<br><br>")
+    let points = [40, 100, 1, 5, 25, 10]
+    points.sort(function(a, b) {
+        return a - b
+    })
+    document.write(points + "<br>");
+
+    points.sort(function(a, b) {
+        return b - a
+    })
+    document.write(points);
+    document.write("<br><br>")
+
+</script>
+</body>
+</html>

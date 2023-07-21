@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // function alertMessage(){
+  //   alert("Hello")
+  // }
+  // alertMessage()
+  // function dangso(a){
+  //   a++
+  //   return a
+  // }
+  // function tinhTong(x,y){
+  //   if(x>y){
+  //     alert(x+" lon hon "+y)
+  //   }else if(x == y){
+  //     alert(x+" bang "+y)
+  //   } else{
+  //     alert(x + " nho hon "+ y)
+  //   }
+  //   let tong = x + y
+  //   return tong
+  // }
+  // let x =+ prompt("nhap x:")
+  // let y =+ prompt("nhap y:")
+  // let bai3 = tinhTong(x,y)
+  // alert("Tong = "+ bai3)
+  // function addNumbers() {
+  //   firstNum = 4;
+  //   secondNum = 8;
+  //   result = firstNum + secondNum;
+  //   return result;
+  // }
+  // result = 0;
+  // alert(result)
+  // result = addNumbers();
+  // alert(result)
+  function timsao() {
+      let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+      let constellation = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor', 'Leo']
+      let star2 = 0
+      let star1 = prompt("nhap ten star:");
+      if (star.indexOf(star1) !== -1) {
+          star2 = constellation[star.indexOf(star1)]
+          alert(star2)
+      } else {
+          alert("nhap lai sao")
+      }
+  }
+  timsao()
+</script>
+</body>
+
+</html>

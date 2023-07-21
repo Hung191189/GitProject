@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="name" placeholder="nhap">
+<button onclick="change()">Dich</button>
+<br>
+<p id="result"></p>
+<script>
+function change(){
+let x = ['orange', 'banana']
+let y = ['cam', 'chuoi']
+let z = 0
+let a = document.getElementById("name").value
+    // if (x.indexOf(a) !== -1) {
+    //     z = y[x.indexOf(a)];
+    // } else
+    //     z = "sai"
+    // console.log(z)
+  for(let i = 0; i <x.length; i++){
+      if(a === x[i]){
+          z = i;
+          console.log(y[z]);
+          break;
+      }else{
+          z = x.length;
+      }
+  }
+  if (z == x.length) {
+      alert("qq");
+  }
+
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
