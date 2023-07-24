@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" height="400px" width="200px" style="border: 1px solid red"></canvas>;
+<canvas id="canvas1" width="300px" height="150px" style="border: 1px solid orangered"></canvas>;
+<canvas id="canvas2" width="200px" height="100px" style="border: 1px solid green"></canvas>;
+<canvas id="canvas3" width="200px" height="100px" style="border: 1px solid saddlebrown"></canvas>;
+<canvas id="canvas4" width="200px" height="100px" style="border: 1px solid deepskyblue"></canvas>;
+
+<script>
+  let c = document.getElementById("canvas");
+  let ctx = c.getContext("2d");
+  ctx.moveTo(0,0);
+  ctx.lineTo(200,400);
+  ctx.stroke();
+  let b = document.getElementById("canvas1");
+  let btx = b.getContext("2d");
+  btx.beginPath();
+  // btx.arc(150,75,70,0,2*Math.PI);
+  btx.rect(150,75,40,20)
+  btx.stroke();
+  let a = document.getElementById("canvas2");
+  let atx = a.getContext("2d");
+  atx.font = "30px time";
+  atx.strokeText("Aloha",20,60);
+  atx.fillText("Aloha",100,60);
+  let d = document.getElementById("canvas3");
+  let dtx = d.getContext("2d");
+  let gra = dtx.createLinearGradient(0,0,250,0);
+  gra.addColorStop(0, "red");
+  gra.addColorStop(1, "blue");
+  dtx.fillStyle = gra;
+  dtx.fillRect(25,10,150,80);
+  let e = document.getElementById("canvas4");
+  let etx = e.getContext("2d");
+  let grd = etx.createLinearGradient(1,50,5,90,60,100);
+  grd.addColorStop(0, "black");
+  grd.addColorStop(1, "pink");
+  etx.fillStyle = grd;
+  etx.fillRect(25,10,150,80);
+</script>
+</body>
+</html>
