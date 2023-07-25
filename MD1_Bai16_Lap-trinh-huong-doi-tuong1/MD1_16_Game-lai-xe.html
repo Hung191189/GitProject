@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canVas" width="600px" height="580px" style="border: 1px solid purple"></canvas>
+</body>
+<script>
+    class car{
+       x;
+       y;
+       img;
+       size;
+        constructor(x, y, left, size) {
+            this.img = img;
+            this.top = y;
+            this.left = x;
+            this.size = size;
+        }
+        // carElement(){
+        //     return ' <img width = "'+this.size+'"' +
+        //             ' height = "'+this.size+'"' +
+        //             ' src = "'+this.img+'"'+
+        //             ' style = "top: '+ this.top+'px; left: '+this.left+'px; position:absolute;"  alt=""/>'
+        // }
+
+    }
+    let myCar = new car('1 bich.png', 20, 30, 100)
+    document.getElementById("canVas").innerHTML = myCar.carElement()
+
+
+</script>
+</html>

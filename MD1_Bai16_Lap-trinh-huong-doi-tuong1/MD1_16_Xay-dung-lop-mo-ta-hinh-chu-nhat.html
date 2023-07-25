@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="myCanvas" width="400px" height="300px" style="border: 1px solid purple"></canvas>
+<canvas id="myCanvas" width="500px" height="300px" style="border: 1px solid purple"></canvas>
+<span id="result"></span>
 <script>
     class Rectangle {
         x;
@@ -18,30 +19,45 @@
             this.width = width;
             this.height = height;
         }
-        getx(){
+        getX(){
             return this.x;
         }
-        gety(){
+        getY(){
             return this.y;
         }
-        getwidth(){
+        getWidth(){
             return this.width;
         }
-        getheight(){
+        getHeight(){
             return this.height;
+        }
+        getArea() {
+            return this.width * this.height;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+        setWidth(width){
+            this.width = width
+        }
+        setHeight(height){
+            this.height = height
         }
     }
     let rtx = document.getElementById("myCanvas").getContext("2d");
-    let myRectangle = new Rectangle(190, 150, 80, 40)
-    // let x = myRectangle.getx();
-    // let y = myRectangle.gety();
-    // let width = myRectangle.getwidth();
-    // let height = myRectangle.getheight();
+    let myRectangle = new Rectangle(0, 0, 200, 100)
+    myRectangle.setWidth(350)
+    document.getElementById("result").innerHTML ="dien tich = " + myRectangle.getArea()
+
+    // let x = myRectangle.getX();
+    // let y = myRectangle.getY();
+    // let width = myRectangle.getWidth();
+    // let height = myRectangle.getHeight();
     rtx.beginPath();
     rtx.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height)
     rtx.fillStyle = "red";
     rtx.fill();
-
     // function creatRectangle(){
     //     let rtx = document.getElementById("myCanvas").getContext("2d");
     //     let myRectangle = new Rectangle(200, 150, 50, 80);

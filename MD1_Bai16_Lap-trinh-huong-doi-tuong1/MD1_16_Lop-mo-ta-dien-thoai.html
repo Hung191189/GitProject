@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span id="result"></span>
+</body>
+<script>
+  class Battery{
+      energy;
+      constructor(energy) {
+        this.energy = energy;
+      }
+      getEnergy(){
+          return this.energy
+      }
+      setEnergy(value){
+          this.energy = value;
+      }
+      decreaseEnergy(){
+          if(this.energy > 0){
+              this.energy--
+          }
+      }
+  }
+  class Mobile{
+      battery;
+      messaging;
+      inbox;
+      sentMessage;
+      status;
+      turnOn;
+      turnOff;
+      charge;
+      message;
+      receiveMessage;
+      sendMessage;
+      constructor() {
+          this.battery = new Battery();
+          this.messaging = messaging;
+
+      }
+  }
+</script>
+</html>
