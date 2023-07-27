@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canVas" width="600px" height="580px" style="border: 10px solid purple"></canvas>
+
+</body>
+</html>
+
+<script>
+  class Car{
+    x;
+    y;
+    width;
+    height;
+    constructor(x,y, width, height) {
+      this.x = x;
+      this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
+    drawCar(){
+
+      let canvas = document.getElementById('canVas')
+      let ctx = canvas.getContext('2d')
+      let img = new Image()
+      img.src= '1_bich.png'
+        console.log(img)
+      img.onload = () => {
+        ctx.drawImage(img,this.x,this.y,this.width,this.height)
+      }
+    }
+
+    moveRight(){
+        this.x += 10
+    }
+    moveLeft(){
+        this.x -= 10
+    }
+    moveUp(){
+        this.y -= 10
+    }
+    moveDown(){
+        this.y += 10
+    }
+    clearCanvas(){
+        let canvas = document.getElementById('canVas')
+        let ctx = canvas.getContext('2d')
+        ctx.clearRect(0,0,canvas.width,canvas.height)
+    }
+    checkCollision(){
+        // let canvas = document.getElementById('canVas')
+
+        if(this.x === 0 || this.x + this.width === 600 ){
+            alert("thua")
+            location.reload();
+        }
+    }
+    moveCar(){
+        window.addEventListener('keydown', (e)=>{
+
+            switch (e.keyCode){
+                case 37 :
+                    this.moveLeft();
+                    this.checkCollision()
+                    this.clearCanvas()
+                    this.drawCar()
+                    break;
+                case 39 :
+                    this.moveRight();
+                    this.checkCollision();
+                    this.clearCanvas();
+                    this.drawCar();
+                    break;
+            }
+        })
+    }
+    moveCar1(){
+        window.addEventListener('keydown', ()=>{
+            if(this.y < 580) {
+                this.moveDown();
+                this.clearCanvas();
+                this.drawCar();
+            }
+        })
+    }
+  }
+
+  let car = new Car(220,400, 40, 80)
+  car.drawCar()
+  car.moveCar()
+  let car1 = new Car(200,0,40, 80)
+  car1.drawCar();
+  car1.moveCar1();
+
+</script>

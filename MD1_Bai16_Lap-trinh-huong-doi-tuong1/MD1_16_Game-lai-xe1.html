@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canVas" width="800px" height="780px" style="border: 1px solid deeppink"></canvas>
+
+</body>
+<script>
+  class Rectangle{
+    x;
+    y;
+    width;
+    height;
+    constructor(x, y, width, height) {
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+    }
+  }
+  let rtx = document.getElementById("canVas").getContext("2d");
+  let myRectangle = new Rectangle(10, 10, 100, 100);
+  rtx.beginPath();
+  // rtx.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+  rtx.fillStyle = "red";
+  // rtx.fill();
+  const size = 100;
+  for(let i = 0; i < 800; i+=size){
+      rtx.fillRect(i, 20, size, size)
+  }
+  for (let x = 0; x < 800; x += size) {
+      rtx.clearRect(0, 0, 800, 780); // Clean up
+      rtx.fillRect(x, 20, size, size);
+  }
+  let x = 0;
+  const id = setInterval(() => {
+      rtx.clearRect(0, 0, 800, 780);
+      rtx.fillRect(x, 50, size, size);
+      x += size;
+      if (x >= 800) {
+          clearInterval(id);
+      }
+  }, 200)
+</script>
+</html>

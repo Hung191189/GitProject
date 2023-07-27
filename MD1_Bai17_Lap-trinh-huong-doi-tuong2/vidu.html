@@ -22,18 +22,19 @@
 
     this.moveRight = function(){
       this.left += 70;
-      console.log('ok: ' + this.left);
+      console.log('right: ' + this.left);
     }
       this.moveDown = function(){
           this.top += 70;
-          console.log('no:' +this.top)
+          console.log('down:' +this.top)
       }
       this.moveLeft = function(){
         this.left -= 70
-          console.log('move left' +this.left)
+          console.log('left' +this.left)
       }
       this.moveUp = function (){
         this.top -= 70
+          console.log(this.top)
       }
   }
   let hero = new Hero('1 bich.png', 20, 30, 100);
@@ -49,7 +50,7 @@
               case "left":
                   hero.moveLeft();
                   break;
-              default:
+              case "up":
                   hero.moveUp();
                   break;
           }

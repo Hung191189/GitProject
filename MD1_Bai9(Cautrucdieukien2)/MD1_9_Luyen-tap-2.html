@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>
+  <input type="number" placeholder="C" id="bai01">
+</label>
+<p id="bai1"></p>
+<button onclick="bai1()">Bai 1</button>
+<br>
+<label>
+    <input type="number" placeholder="M" id="bai02">
+</label>
+<p id="bai2"></p>
+<button onclick="bai2()">Bai 2</button>
+<br>
+<label>
+    <input type="number" placeholder="canh hinh vuong" id="bai03">
+</label>
+<p id="bai3"></p>
+<button onclick="bai3()">Bai 3</button>
+<br>
+<label>
+    <input type="number" placeholder="chieu dai" id="bai04">
+</label>
+<label>
+    <input type="number" placeholder="chieu rong" id="bai04a">
+</label>
+<p id="bai4"></p>
+<button onclick="bai4()">Bai 4</button>
+<br>
+<label>
+    <input type="number" placeholder="canh a" id="bai05">
+</label>
+<label>
+    <input type="number" placeholder="canh b" id="bai05a">
+</label>
+<p id="bai5"></p>
+<button onclick="bai5()">Bai 5</button>
+<br>
+<button onclick="bai6()">Bài 6</button>
+<br>
+<button onclick="bai7()">Bài 7</button>
+<br>
+<label>
+    <input type="number" placeholder="nhap so" id="bai08">
+</label>
+<br>
+<button onclick="bai8()">Bài 8</button>
+<br>
+<br>
+<button onclick="bai9()">Bài 9</button>
+<br>
+<br>
+<button onclick="bai10()">Bài 10</button>
+<br>
+<br>
+<button onclick="bai11()">Bài 11</button>
+<br>
+<br>
+<button onclick="bai12()">Bài 12</button>
+<br>
+</body>
+</html>
+<script>
+    function bai1(){
+        let c =+ document.getElementById("bai01").value;
+        let f = 9/5*c + 32
+        document.getElementById("bai1").innerText ="Độ F =" + f
+    }
+    function bai2(){
+        let c =+ document.getElementById("bai02").value;
+        let f = c*3.2808;
+        document.getElementById("bai2"). innerHTML = "Feet = " + f
+    }
+    function bai3(){
+        let c =+ document.getElementById("bai03").value;
+        let f = c*c
+        document.getElementById("bai3"). innerHTML = "Dien tich = " + f
+    }
+    function bai4(){
+        let c =+ document.getElementById("bai04").value;
+        let c1 =+ document.getElementById("bai04a").value;
+        let f = c*c1
+        document.getElementById("bai4"). innerHTML = "Dien tich = " + f
+    }
+    function bai5(){
+        let c =+ document.getElementById("bai05").value;
+        let c1 =+ document.getElementById("bai05a").value;
+        let f = (c*c1)/2
+        document.getElementById("bai5"). innerHTML = "Dien tich = " + f
+    }
+    function bai6(){
+        let a =+ prompt("nhập a:");
+        let b =+ prompt("nhập b:");
+        if(a === 0 && b === 0){
+            alert("Phương trình vô số nghiệm");
+        } else if (a === 0 && b !== 0){
+            alert("Phương trình vô nghiệm");
+        } else if (a !== 0){
+            let x = -b/a;
+            alert(x);
+        }
+    }
+    function bai7(){
+        let a =+ prompt("nhập a:");
+        let b =+ prompt("nhập b:");
+        let c =+ prompt("nhập c:");
+        let delta = (b*b) - (4*a*c)
+        console.log(delta)
+        // if(a ===0 && b ===0 && c ===0){
+        //     alert("Phương trình vô số nghiệm");
+        // } else if(a === 0 && b !==0) {
+        //     alert("về bậc 1");
+        // }
+        if (delta < 0){
+            alert("Phương trình vô số nghiệm");
+        } else if (delta === 0){
+            let x1 = -b/2*a;
+            alert("Phương trình có 2 nghiệm x1 = x2 = " + x1)
+        } else{
+            let x1 = (-b - Math.sqrt(delta))/2*a
+            let x2 = (-b + Math.sqrt(delta))/2*a
+            alert("Phương trình có 2 nghiệm x1 ="+ x1 + " x2 = "+ x2)
+        }
+    }
+    function bai8(){
+        let a =+ document.getElementById("bai08").value;
+        if(a < 120 && a > 0){
+            alert(a+"là tuổi của một người")
+        } else{
+            alert("không phải tuổi người")
+        }
+    }
+    function bai9(){
+        let a =+ prompt("nhập chiều dài canh a")
+        let b =+ prompt("nhập chiều dài canh b")
+        let c =+ prompt("nhập chiều dài canh c")
+        if(a >0 && b >0 && c >0){
+            if(a + b > c && b + c > a && a + c > b){
+                alert("3 canh a, b, c là cạnh  1 tam giác")
+            }else{
+                alert("không phải cạnh tam giác")
+            }
+        }else{
+            alert("không phải cạnh tam giác")
+        }
+    }
+    function bai10(){
+        let a =+ prompt("nhập số điện:")
+        let c = 0
+        let d = 0
+        if(a> 0 && a < 100){
+            c = a*1500;
+        } else if (a >=100 && a < 200){
+            d = a*2000;
+        }else{
+            alert("khong mat tien")
+        }
+        let e = c + d
+        alert("Tiền điện bạn là: " + e)
+    }
+    function bai11(){
+        let a =+ prompt("nhập lương:")
+        let c = 0
+        let d = 0
+        if(a > 10000000 ){
+            c = a*0.05;
+        } else{
+            alert("khong mat tien")
+        }
+        if(a >=10000000 && a < 50000000){
+            d = a*0.1
+        }
+        let e = c + d
+        alert("Tiền thuế: " + e)
+    }
+    function bai12(){
+        let a =+ prompt("nhập số tiền gửi");
+        let b =+ prompt("số tháng gửi");
+        let c = 0
+        for(i = 0; i < b; i++){
+                c = a*0.1;
+                a += c
+        }
+        alert("tổng tiền là" + a)
+    }
+</script>

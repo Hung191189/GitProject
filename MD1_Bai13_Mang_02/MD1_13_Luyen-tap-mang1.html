@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.
+  Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+</p><br>
+<button onclick="bai1()">Bai 1</button><br>
+<p id="bai01"></p>
+<p>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</p>
+<br>
+<button onclick="bai2()">Bai 2</button><br>
+<p id="bai02"></p>
+</body>
+</html>
+<script>
+  function bai1(){
+    let a = [];
+    for(j = 0; j < 10; j++){
+        a[j] =+ prompt("nhap so")
+    }
+      console.log(a)
+    let count = 0;
+    for(let i = 0; i < a.length; i++){
+        if(a[i] >= 10){
+        count++
+        }
+    }
+    document.getElementById("bai01").innerHTML = count
+  }
+  function bai2(){
+      let a = [];
+      for(i = 0; i < 10; i++){
+          a[i] =+ prompt("nhap so")
+      }
+      let max = a[0]
+      let index = 0
+      for(let j = 1; j < a.length; j++){
+          if(a[j] > max){
+              max = a[j];
+              index = j
+          }
+      }
+      document.getElementById("bai02").innerHTML = "số lớn nhất = "+ max + "vị trí thứ: " + index
+  }
+
+</script>
