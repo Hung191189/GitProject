@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 1: Viết chương trình khởi tạo mảng 2 chiều,
+    gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng.
+    Chú ý: Sử dụng vòng lặp for lồng nhau</p>
+<br>
+<p id="bai01"></p>
+<button onclick="bai1()">Bai 1</button>
+<p>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ]
+    sau khi thực hiện đảo ngược sẽ là "162csc"</p>
+<br>
+<p id="bai02"></p>
+<button onclick="bai2()">Bai 2</button>
+<p>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    Chương trình này đếm số ký tự số trong mảng. </p>
+<br>
+<p id="bai03"></p>
+<button onclick="bai3()">Bai 3</button>
+<p>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi</p>
+<br>
+<p id="bai04"></p>
+<button onclick="bai4()">Bai 4</button>
+<p>Bài 5: Viết một chương trình nhập vào 2 chuỗi,
+    sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</p>
+<br>
+<p id="bai05"></p>
+<button onclick="bai5()">Bai 5</button>
+<p>Bài 6: Viết chương trình nhập vào một mảng ký tự,
+    tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</p>
+<br>
+<p id="bai06"></p>
+<button onclick="bai6()">Bai 6</button>
+</body>
+</html>
+<script>
+    function bai1(){
+        let a = [];
+        let data = ""
+        for(let i = 0; i < 5; i++){
+            a[i] = new Array(Math.round(Math.random()*100),Math.round(Math.random()*100),Math.round(Math.random()*100),Math.round(Math.random()*100),Math.round(Math.random()*100))
+        }
+            for(let i =0; i < 5; i++){
+                data += "<br>";
+                for(let j = 0; j < 5; j++){
+                    data += a[i][j] + "  "
+                }
+            }
+        document.getElementById("bai01").innerHTML = data
+    }
+    function bai2(){
+        let a = [];
+        for(i = 0; i < 5; i++){
+            a[i] = prompt("nhap mang")
+        }
+        let frist = 0;
+        let last = a.length -1;
+        while (frist < last){
+            let x = a[frist];
+            a[frist] = a[last];
+            a[last] = x
+            frist++
+            last--
+        }
+        let b = a.join("")
+        document.getElementById("bai02").innerHTML = b
+    }
+    function bai3(){
+        let a = [];
+        // let v = -1
+        for(i = 0; i < 5; i++){
+            a[i] = prompt("nhap mang")
+            // let index = a.indexOf(v) chua lam dc
+            // console.log(a)
+            // console.log(index)
+            // if(index > -1){
+            //     break;
+            }
+        let b = a.length
+        document.getElementById("bai03").innerHTML = "do dai cua mang la "+b
+    }
+    function bai4() {
+        let a = prompt("nhap chuoi");
+        let b = a.split(' ')
+        console.log(b)
+        let c = b.length
+        document.getElementById("bai04").innerHTML = "so tu la : " + c
+    }
+    function bai5() {
+        let a = prompt("nhap chuoi a");
+        let b = prompt("nhap chuoi b");
+        if(a === b) {
+            alert(true)
+        }else {
+            alert(false)
+        }
+    }
+    function bai6() {
+        let a = [];
+        for (i = 0; i < 5; i++) {
+            a[i] = prompt("nhap mang")
+        }
+        let b = a.join('')
+        let c = b.replace('-', '_')
+        document.getElementById("bai06").innerHTML = c
+    }
+</script>
